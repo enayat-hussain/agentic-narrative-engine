@@ -1,4 +1,4 @@
-# AI RPG Adventure Game
+# Agentic Narrative Engine
 
 A real-time streaming RPG chatbot with **multi-provider support** that creates interactive text-based adventures using various AI services.
 
@@ -18,9 +18,9 @@ A real-time streaming RPG chatbot with **multi-provider support** that creates i
 * **Modern UI**: Clean, professional interface inspired by ChatGPT/Claude with dark sidebar
 
 ### Supported AI Providers
-* **OpenAI** (GPT-4, GPT-4o, GPT-3.5-turbo)
-* **Anthropic** (Claude-3.5 Sonnet, Claude-3 Haiku, Claude-3 Opus)
-* **Google** (Gemini 2.5 Flash-Lite, Gemini 2.0 Flash)
+* **OpenAI** (default: gpt-4o-mini)
+* **Anthropic** (default: claude-3-haiku-20240307)
+* **Google** (default: gemini-2.0-flash)
 * **DeepSeek** (DeepSeek Chat, DeepSeek Coder, DeepSeek Reasoner)
 * **Ollama** (Local: auto-detects all installed models)
 * **Groq** (Fast inference: Llama, Mixtral, Gemma models)
@@ -53,8 +53,8 @@ ollama serve
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/enayat-hussain/roleplay-chatbot.git
-   cd roleplay-chatbot
+   git clone https://github.com/enayat-hussain/agentic-narrative-engine.git
+   cd agentic-narrative-engine
    ```
 
 2. **Install Dependencies**
@@ -64,7 +64,7 @@ ollama serve
 
 3. **Configure Environment Variables**
    ```bash
-   # A .env file is included with sensible defaults.
+   # Create your .env from the template: cp .env.example .env
    # Open it and fill in whichever API key(s) you need.
    ```
 
@@ -128,7 +128,7 @@ ollama serve
 ## Project Structure
 
 ```
-roleplay-chatbot/
+agentic-narrative-engine/
 ├── app.py                # Main Flask application
 ├── chatbot.py            # Universal AI client with auto-detection of LLMs
 ├── game_logic.py         # RPG game state management + intelligent endings
@@ -144,7 +144,7 @@ roleplay-chatbot/
 │       └── app.js        # Frontend JavaScript (streaming, interactions)
 │
 ├── requirements.txt      # Python dependencies
-├── .env                  # Environment variables (edit this)
+├── .env.example     # Template for your .env (copy to .env, never commit .env)
 │
 ├── gm_prompt.txt         # Game Master instructions (edit to customise)
 ├── rp_prompt.txt         # Player role instructions (edit to customise)
